@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResolveIT - Issue Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1>ResolveIT</h1>
+            <p>Issue Details</p>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+
+    </header>
+
+
+    <main class="dashboard-content">
+
+        <button id="backBtn" class="back-btn">
+            ← Back to Dashboard
+        </button>
+
+
+        <!-- Issue Details -->
+
+        <section class="issue-details">
+
+            <h2 id="issueTitle">Loading...</h2>
+
+            <p>
+                <strong>Issue ID:</strong>
+                <span id="issueId"></span>
+            </p>
+
+            <p>
+                <strong>Description:</strong>
+                <span id="issueDescription"></span>
+            </p>
+
+            <p>
+                <strong>Category:</strong>
+                <span id="issueCategory"></span>
+            </p>
+
+            <p>
+                <strong>Priority:</strong>
+                <span id="issuePriority"></span>
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                <span id="issueStatus"></span>
+            </p>
+
+            <p>
+                <strong>Created At:</strong>
+                <span id="issueCreatedAt"></span>
+            </p>
+
+            <button id="closeIssueBtn" class="close-btn">
+                Close Issue
+            </button>
+
+           
+            <!-- Support-only status controls -->
+            <section id="supportControls" style="display: none; margin-top: 20px;">
+                <h3>Manage Issue Status</h3>
+
+                <label for="supportStatus">Update Status</label>
+
+                <select id="supportStatus">
+                    <option value="OPEN">OPEN</option>
+                    <option value="ASSIGNED">ASSIGNED</option>
+                    <option value="IN PROGRESS">IN PROGRESS</option>
+                    <option value="RESOLVED">RESOLVED</option>
+                    <option value="CLOSED">CLOSED</option>
+                </select>
+
+                <button id="updateStatusBtn" type="button">
+                    Update Status
+                </button>
+
+                <p id="statusMessage"></p>
+            </section>
+
+            <p id="closeMessage"></p>
+
+        </section>
+
+
+        <!-- Comments -->
+
+        <section class="comments-section">
+
+            <h2>Comments</h2>
+
+            <div id="commentsContainer">
+                <p>Loading comments...</p>
+            </div>
+
+
+            <form id="commentForm">
+
+                <label for="comment">
+                    Add Comment
+                </label>
+
+                <textarea
+                    id="comment"
+                    placeholder="Write your comment..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Add Comment
+                </button>
+
+            </form>
+
+            <p id="commentMessage"></p>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/issue.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResolveIT - Employee Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>ResolveIT</h1>
+                <p>Employee Dashboard</p>
+            </div>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="welcome-section">
+                <h2>My Issues</h2>
+                <p>View and manage the IT issues you have reported.</p>
+            </section>
+
+            <section class="action-section">
+
+                <button id="createIssueBtn">
+    + Create New Issue
+</button>
+
+<div id="issueFormContainer" class="form-container hidden">
+
+    <h2>Create New Issue</h2>
+
+    <form id="issueForm">
+
+        <label for="title">Issue Title</label>
+        <input
+            type="text"
+            id="title"
+            placeholder="Enter issue title"
+            required
+        >
+
+        <label for="description">Description</label>
+        <textarea
+            id="description"
+            placeholder="Describe the problem"
+            required
+        ></textarea>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+            <option value="">Select category</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Network">Network</option>
+            <option value="Account/Login">Account/Login</option>
+            <option value="Database">Database</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select id="priority" required>
+            <option value="LOW">Low</option>
+            <option value="MEDIUM" selected>Medium</option>
+            <option value="HIGH">High</option>
+            <option value="CRITICAL">Critical</option>
+        </select>
+
+        <div class="form-buttons">
+
+            <button type="submit">
+                Create Issue
+            </button>
+
+            <button
+                type="button"
+                id="cancelIssueBtn"
+                class="cancel-btn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+        <p id="issueMessage"></p>
+
+    </form>
+
+</div>
+
+            </section>
+
+            <section class="issues-section">
+
+                <div class="section-header">
+                    <h2>My Issues</h2>
+
+                    <button id="refreshBtn">
+                        Refresh
+                    </button>
+                </div>
+
+                <div id="issuesContainer">
+                    <p>Loading issues...</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/employee.js"></script>
+
+</body>
+</html>

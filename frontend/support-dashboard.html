@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResolveIT - Support Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <header class="dashboard-header">
+        <div>
+            <h1>ResolveIT</h1>
+            <p>Support Dashboard</p>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main class="dashboard-content">
+
+        <section class="welcome-section">
+            <h2>Support Issue Management</h2>
+            <p>View, search, assign, and manage reported IT issues.</p>
+        </section>
+
+        <!-- Dashboard Statistics -->
+
+        <section class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Issues</h3>
+                <p id="totalIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Open</h3>
+                <p id="openIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="inProgressIssues">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="resolvedIssues">0</p>
+            </div>
+
+        </section>
+
+        <!-- Search and Filters -->
+
+        <section class="issues-section">
+
+            <div class="section-heading">
+                <h2>All Reported Issues</h2>
+                <button id="refreshBtn">Refresh</button>
+            </div>
+
+            <div class="filter-container">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by title or description">
+
+                <select id="statusFilter">
+                    <option value="">All Statuses</option>
+                    <option value="OPEN">Open</option>
+                    <option value="ASSIGNED">Assigned</option>
+                    <option value="IN PROGRESS">In Progress</option>
+                    <option value="RESOLVED">Resolved</option>
+                    <option value="CLOSED">Closed</option>
+                </select>
+
+                <select id="priorityFilter">
+                    <option value="">All Priorities</option>
+                    <option value="LOW">Low</option>
+                    <option value="MEDIUM">Medium</option>
+                    <option value="HIGH">High</option>
+                    <option value="CRITICAL">Critical</option>
+                </select>
+
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Network">Network</option>
+                    <option value="Account/Login">Account/Login</option>
+                    <option value="Database">Database</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button id="filterBtn">Apply Filters</button>
+
+            </div>
+
+            <p id="message"></p>
+
+            <div id="issuesContainer">
+                <p>Loading issues...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/support.js"></script>
+
+</body>
+</html>
